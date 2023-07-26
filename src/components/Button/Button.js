@@ -1,7 +1,18 @@
 import "./Button.css"
 
+const posiblesEmphasis = ["low", "medium", "high"]
+
 export const Button = (emphasis, text, id) => {
-    return `<button id="${id}" class="${emphasis} myButton">${text}</button>`
+
+    const comprobarEmphasis = () => {
+        if (!posiblesEmphasis.includes(emphasis)) {
+            return "high"
+        } else {
+            return emphasis
+        }
+    }
+
+    return `<button id="${id}" class="${comprobarEmphasis()} myButton">${text}</button>`
 }
 
 
