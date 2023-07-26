@@ -1,16 +1,11 @@
 import './style.css';
-import { Button } from './src/components/Button/Button';
+import { Header } from './src/components/Header/Header';
+import { Hero } from './src/components/Hero/Hero';
 
 const initApp = () => {
 
-  const app$$ = document.querySelector("#app");
-
-  app$$.innerHTML = `
-    ${Button("high", "Sign up", "id1")}
-    ${Button("medium", "Discover Now", "id2")}
-    ${Button("low", "Login", "pepe")}
-    ${Button("high", "Explore Now", "juanillo")}
-  `
+  Header();
+  Hero();
 
 }
 
